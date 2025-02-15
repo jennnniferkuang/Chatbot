@@ -1,7 +1,7 @@
 from openai import OpenAI
 from pathlib import Path
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="YOUR_KEY")
 speech_file_path = Path(__file__).parent / "speech.mp3"
 log_file_path = Path(__file__).parent / "logs.txt"
 
