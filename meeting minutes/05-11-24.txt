@@ -1,0 +1,19 @@
+This week:
+- Got ChatGPT API key
+- Delegated project components to members
+- Started on:
+    - send and receive from ChatGPT
+    - designing display
+- Will buy hardware components today @4:30
+
+Next week:
+- Finish:
+    - send and receive
+    - text-to-speech
+    - basic display (colours and status minimum, aim for expressions/tone)
+
+Challenges:
+- Setting up systems
+- Adding complexity
+    - Hoping to finish MVP by end of next week to have time to add upon display component
+    - Hoping to be able to play simple board games with the bot using voice commands

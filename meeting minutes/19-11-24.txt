@@ -1,0 +1,21 @@
+This week:
+- Draw face for response tone
+- Draw boards to play board games (currently supports chess, checkers, battleship)
+- Tic tac toe playable with chatgpt
+- stt working
+- communication with chatgpt all set up
+- basically have met mvp, just optimize/debug a couple things
+    - according to original plan, aiming to have completed mvp by end of this week
+
+Next week:
+- finish mvp by monday latest
+- continue working on additional features, implementing board game mechanics
+- work on translations
+
+Challenges:
+- how to diversify games available?
+    - get chatgpt to send the rules and configure the board layout
+    - send us the number of tiles, layout of the pieces, etc.
+    - every time the player makes a move, send to chatgpt to see if the move is legal before updating the board
+    - generalized board class and update mechanics
+    - only limited to board based games

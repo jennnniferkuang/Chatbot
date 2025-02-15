@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voice Assistant :D</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <!--<input type="text" name="prompt" id="userPrompt" placeholder="Enter a prompt: " />-->
+        <!--<button id = "speak-button">SPEAK</button>-->
+        <button onmousedown="setState('listening')" onmouseup="setState('responding')">SPEAK</button>
+        <!--<input type="text" onkeydown="changeBackground('green')"/>
+        <input type="text" onkeyup="changeBackground('red')"/>-->
+
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </body>
+</html>

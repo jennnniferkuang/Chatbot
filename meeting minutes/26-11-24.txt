@@ -1,0 +1,31 @@
+So far:
+- Machine learning model for some reason
+	- Generative, create/display pictures
+	- Easy to scale down
+- Chatbot
+	- Talk to and talk back
+	- Save feature, records of chats, transcripts
+- Integrated flask
+	- But flask might be a little too heavy to run on Pi zero
+- app.py display (using tkinter)
+	- TO DO: integrate with rest of project
+- games and generative ai (pygame)
+- continuous listening might not be that feasible(abandon at this time)
+
+To Do:
+Jen/Kevin:
+- Move stuff from pygame to tkinter
+- Keep working on UI
+Charlie:
+- Integrate chatbot into app.py
+Gavin:
+- Get the generative images working
+- Send images to tkinter
+Jiatao:
+- Create voices and tones, change variables for expression
+- Translations
+Raymond:
+- Add chatgpt to play chess
+- 
+
+Submit draft report by Dec. 2

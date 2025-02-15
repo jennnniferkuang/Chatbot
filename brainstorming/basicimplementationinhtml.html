@@ -1,0 +1,65 @@
+// basic html webkitSpeechRecognition implemention of a tts and stt service, very barebones and im not even sure if it works on a raspberry pi, however this is just for testing and is definitely not going to be used in the final product
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tts stt</title>
+</head>
+<body>
+  <h2>tts</h2>
+  <textarea id="textToSpeak"></textarea>also
+  <br><br>
+  <button onclick="convertTextToSpeech()">start</button>
+
+  <h2>sst</h2>
+  <button onclick="startRecognition()">start</button>
+  <p id="transcript">i said: </p>
+
+  <script>
+    // tts
+    function convertTextToSpeech() {
+      const text = document.getElementById('textToSpeak').value;
+      const speechSynthesis = window.speechSynthesis;
+
+      if (!speechSynthesis) {
+        alert('tts fail screw raspberry pis');
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      speechSynthesis.speak(utterance);
+    }
+
+    // stt
+    function startRecognition() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert('stt failed screw raspberry pis');
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'en-US';
+      recognition.interimResults = true;
+      recognition.maxAlternatives = 1;
+
+      recognition.start();
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        document.getElementById('transcript').innerText = 'You said: ' + transcript;
+      };
+
+      recognition.onerror = (event) => {
+        console.error('Speech recognition error:', event.error);
+        document.getElementById('transcript').innerText = 'this should never happen in any case: ' + event.error;
+      };
+    }
+  </script>
+</body>
+</html>

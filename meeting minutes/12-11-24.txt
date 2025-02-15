@@ -1,0 +1,22 @@
+This week:
+- Finished text to speech
+- Finished speech to text
+- Finished send/receive from GPT
+    - Get speech file from GPT
+- Started setting up simple display using Flask and HTML
+
+Next week:
+- Refine existing functions
+- Link to raspberry pi
+    - Make sure everything can run
+    - Connect the parts together
+- Focus on UI
+    - Customization of prompts/responses
+- Store conversation history
+
+Challenges:
+- UI is kind of ugly
+    - Adding Tailwind for better UX (chat i have no webdev experience)
+- Hard finding sufficiently small tts and stt libraries to use on a Pi
+- Don't have our Pi yet so can't really check if we can run everything yet
+    - might need to cut down on some stuff if the pi can't handle all of it
